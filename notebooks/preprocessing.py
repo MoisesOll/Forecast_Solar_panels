@@ -128,14 +128,6 @@ def compute_solar_production():
                        'total_cloud_cover']
     phase2_df[numeric_columns] = phase2_df[numeric_columns].apply(pd.to_numeric)
     df_numerics = phase2_df[numeric_columns]
-    with open("/home/jorge/PycharmProjects/solar_power_forecast/data/solar_production.P", "wb") as f:
-        pickle.dump(solar1, f)
-
-    with open("/home/jorge/PycharmProjects/solar_power_forecast/data/df_numerics.P", "wb") as f:
-        pickle.dump(df_numerics, f)
-
-    with open("/home/jorge/PycharmProjects/solar_power_forecast/data/phase2_df.P", "wb") as f:
-        pickle.dump(phase2_df, f)
 
 
 if __name__ == '__main__':
